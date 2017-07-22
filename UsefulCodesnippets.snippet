@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Console.WriteLine Hello World</Title>
+      <Author>Gernot Pokorny</Author>
+      <Description>Says Hello to the world.</Description>
+      <Shortcut>cwhw</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>SystemConsole</ID>
+          <Function>SimpleTypeName(global::System.Console)</Function>
+          <Default>Console</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$SystemConsole$.WriteLine("Hello World!");]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>WaitForQuit</Title>
+      <Description>Code snippet that inserts a "WaitForQuit-loop"</Description>
+      <Author>Gernot Pokorny</Author>
+      <Shortcut>wfq</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>SystemConsole</ID>
+          <Function>SimpleTypeName(global::System.Console)</Function>
+          <Default>Console</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[// Wait for the user to quit the program.
+$SystemConsole$.WriteLine("Press \'q\' to quit the sample.");
+while ($SystemConsole$.Read() != 'q') ;]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
